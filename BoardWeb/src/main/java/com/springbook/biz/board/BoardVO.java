@@ -1,5 +1,12 @@
 package com.springbook.biz.board;
 
-public class BoardVO {
+import java.sql.Date;
 
+public class BoardVO {
+	private int seq;
+	private String title;
+	private String writer;
+	private String content;
+	private Date regDate;
+	private int cnt;
 }
