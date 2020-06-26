@@ -94,7 +94,7 @@ public class BoardDAO {
 		} finally {
 			JDBCUtll.close(rs, stmt, conn);
 		}
-		return board;
+		return board; 
 	} 
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		System.out.println("JDBC => getBoardList()");
