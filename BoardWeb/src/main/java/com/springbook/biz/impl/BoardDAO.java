@@ -48,10 +48,23 @@ public class BoardDAO {
 		System.out.println("JDBC => updateBoard()");
 		try {
 			conn = JDBCUtll.getConnection();
-			stmt = conn.prepareStatement(BOARD_DELETE);
+			stmt = conn.prepareStatement(BOARD_UPDATE);
 			stmt.setString(1, vo.getTitle());
 			stmt.setString(2, vo.getContent());
 			stmt.setInt(3, vo.getSeq());
+			stmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtll.close(stmt, conn);
+		}
+	} 
+	public void deleteBoard(BoardVO vo) {
+		System.out.println("JDBC => deleteBoard()");
+		try {
+			conn = JDBCUtll.getConnection();
+			stmt = conn.prepareStatement(BOARD_DELETE);
+			stmt.setInt(1, vo.getSeq());
 			stmt.executeUpdate();
 		} catch (Exception e) {
 			e.printStackTrace();
