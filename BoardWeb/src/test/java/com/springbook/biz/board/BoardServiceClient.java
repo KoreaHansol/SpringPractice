@@ -1,5 +1,4 @@
 package com.springbook.biz.board;
-
 import java.util.List;
 
 import org.springframework.context.support.AbstractApplicationContext;
@@ -15,10 +14,19 @@ public class BoardServiceClient {
 		
 		// 글 등록 테스
 		BoardVO vo = new BoardVO();
-		vo.setTitle("testTitle");
-		vo.setWriter("testWriter");
-		vo.setContent("testContent");
+		vo.setTitle("ㅁㄴ");
+		vo.setWriter("ㅈㅂㅇㅂㅈㅇㅂㅇㅂ");
+		vo.setContent("3");
 		boardService.insertBoard(vo);
+		
+		BoardVO vo2 = new BoardVO();
+		vo2.setTitle("asd");
+		vo2.setWriter("김한솔");
+		vo2.setContent("김한솔test");
+		boardService.insertBoard(vo2);
+		
+		
+		
 		
 		// 글 목록 검색 기능 테스트
 		List<BoardVO> boardList = boardService.getBoardList(vo);
