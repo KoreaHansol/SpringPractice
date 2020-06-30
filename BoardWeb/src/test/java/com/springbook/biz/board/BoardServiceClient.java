@@ -19,12 +19,6 @@ public class BoardServiceClient {
 		vo.setContent("3");
 		boardService.insertBoard(vo);
 		
-		BoardVO vo2 = new BoardVO();
-		vo2.setTitle("asd");
-		vo2.setWriter("김한솔");
-		vo2.setContent("김한솔test");
-		boardService.insertBoard(vo2);
-		
 		
 		
 		
